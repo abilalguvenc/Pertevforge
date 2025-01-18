@@ -1,0 +1,1 @@
+// Tüm tema değiştirme kodunu kaldır, js dosyası boş kalabilir veya başka işlevler için kullanılabilir 

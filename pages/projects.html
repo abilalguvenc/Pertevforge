@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeler - Pertevforge Entertainment</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/projects.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <img src="../assets/images/logo.png" alt="Pertevforge Logo" class="logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Ana Sayfa</a></li>
+            <li><a href="projects.html">Projeler</a></li>
+            <li><a href="calendar.html">Takvim</a></li>
+            <li><a href="team.html">Ekibimiz</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="projects-section">
+            <div class="container">
+                <h1 class="section-title">Projelerimiz</h1>
+                <p class="section-subtitle">Geliştirdiğimiz ve geliştirmekte olduğumuz oyunlar</p>
+
+                <!-- Filtreleme ve sıralama bölümü -->
+                <div class="projects-controls">
+                    <div class="filter-controls">
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="showReleasedOnly">
+                            <span class="checkmark"></span>
+                            Sadece Yayınlananları Göster
+                        </label>
+                    </div>
+                    <div class="sort-controls">
+                        <select id="sortProjects">
+                            <option value="newest">En Yeni</option>
+                            <option value="oldest">En Eski</option>
+                            <option value="name">İsme Göre (A-Z)</option>
+                            <option value="status">Duruma Göre</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Proje 1 -->
+                    <div class="project-card" data-date="2024-03-15" data-status="concept">
+                        <div class="project-image">
+                            <img src="../assets/images/project1.jpg" alt="2D Platformer">
+                            <div class="project-status concept">Konsept Aşaması</div>
+                        </div>
+                        <div class="project-info">
+                            <h2>2D Platformer</h2>
+                            <div class="project-meta">
+                                <span><i class="fas fa-desktop"></i> PC</span>
+                                <span><i class="fab fa-unreal"></i> UE5</span>
+                                <span><i class="far fa-calendar-alt"></i> Mart 2024</span>
+                            </div>
+                            <p>Klasik platform oyunu mekaniklerini modern bir yaklaşımla birleştiren 2D macera oyunu.</p>
+                            <div class="project-tags">
+                                <span class="tag">2D</span>
+                                <span class="tag">Platformer</span>
+                                <span class="tag">Pixel Art</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Proje 2 -->
+                    <div class="project-card" data-date="2024-02-01" data-status="prototype">
+                        <div class="project-image">
+                            <img src="../assets/images/project1.jpg" alt="Survival Prototype">
+                            <div class="project-status prototype">Prototip</div>
+                        </div>
+                        <div class="project-info">
+                            <h2>Survival Prototype</h2>
+                            <div class="project-meta">
+                                <span><i class="fas fa-desktop"></i> PC</span>
+                                <span><i class="fab fa-unreal"></i> UE5</span>
+                                <span><i class="far fa-calendar-alt"></i> Şubat 2024</span>
+                            </div>
+                            <p>Açık dünya hayatta kalma oyunu. Craft sistemi ve dinamik hava koşulları ile gerçekçi bir deneyim sunuyor.</p>
+                            <div class="project-tags">
+                                <span class="tag">3D</span>
+                                <span class="tag">Survival</span>
+                                <span class="tag">Open World</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Proje 3 -->
+                    <div class="project-card" data-date="2024-01-10" data-status="development">
+                        <div class="project-image">
+                            <img src="../assets/images/project1.jpg" alt="Puzzle Game">
+                            <div class="project-status development">Geliştirme Aşaması</div>
+                        </div>
+                        <div class="project-info">
+                            <h2>Puzzle Adventure</h2>
+                            <div class="project-meta">
+                                <span><i class="fas fa-desktop"></i> PC</span>
+                                <span><i class="fab fa-unreal"></i> UE5</span>
+                                <span><i class="far fa-calendar-alt"></i> Ocak 2024</span>
+                            </div>
+                            <p>Atmosferik bir dünyada geçen, fizik tabanlı bulmaca oyunu.</p>
+                            <div class="project-tags">
+                                <span class="tag">3D</span>
+                                <span class="tag">Puzzle</span>
+                                <span class="tag">Adventure</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Proje 4 -->
+                    <div class="project-card" data-date="2023-11-15" data-status="beta">
+                        <div class="project-image">
+                            <img src="../assets/images/project1.jpg" alt="Dungeon Crawler">
+                            <div class="project-status beta">Açık Beta</div>
+                        </div>
+                        <div class="project-info">
+                            <h2>Dungeon Master</h2>
+                            <div class="project-meta">
+                                <span><i class="fas fa-desktop"></i> PC</span>
+                                <span><i class="fab fa-unreal"></i> UE5</span>
+                                <span><i class="far fa-calendar-alt"></i> Kasım 2023</span>
+                            </div>
+                            <p>Roguelike tarzında, prosedürel olarak oluşturulan zindanlarda geçen bir macera oyunu.</p>
+                            <div class="project-tags">
+                                <span class="tag">3D</span>
+                                <span class="tag">Roguelike</span>
+                                <span class="tag">RPG</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <i class="fab fa-steam"></i> Steam Sayfası
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-gamepad"></i> Beta Katılım
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Proje 5 -->
+                    <div class="project-card" data-date="2023-09-01" data-status="released">
+                        <div class="project-image">
+                            <img src="../assets/images/project1.jpg" alt="Racing Game">
+                            <div class="project-status released">Yayında</div>
+                        </div>
+                        <div class="project-info">
+                            <h2>Speed Masters</h2>
+                            <div class="project-meta">
+                                <span><i class="fas fa-desktop"></i> PC</span>
+                                <span><i class="fab fa-unreal"></i> UE5</span>
+                                <span><i class="far fa-calendar-alt"></i> Eylül 2023</span>
+                            </div>
+                            <p>Arcade tarzı yarış oyunu. Çoklu oyuncu desteği ve özelleştirilebilir arabalar.</p>
+                            <div class="project-tags">
+                                <span class="tag">3D</span>
+                                <span class="tag">Racing</span>
+                                <span class="tag">Multiplayer</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <i class="fab fa-steam"></i> Steam'de Satın Al
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fab fa-itch-io"></i> itch.io
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Proje 6 -->
+                    <div class="project-card" data-date="2024-03-01" data-status="development">
+                        <div class="project-image">
+                            <img src="../assets/images/project1.jpg" alt="Strategy Game">
+                            <div class="project-status development">Geliştirme Aşaması</div>
+                        </div>
+                        <div class="project-info">
+                            <h2>Empire Builder</h2>
+                            <div class="project-meta">
+                                <span><i class="fas fa-desktop"></i> PC</span>
+                                <span><i class="fab fa-unreal"></i> UE5</span>
+                                <span><i class="far fa-calendar-alt"></i> Mart 2024</span>
+                            </div>
+                            <p>Strateji ve şehir inşa etme oyunu. Ekonomi yönetimi ve diplomatik ilişkiler.</p>
+                            <div class="project-tags">
+                                <span class="tag">Strategy</span>
+                                <span class="tag">City Builder</span>
+                                <span class="tag">Economy</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Pertevforge Entertainment</p>
+    </footer>
+
+    <script src="../js/projects.js"></script>
+</body>
+</html> 

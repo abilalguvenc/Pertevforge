@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pertevforge Entertainment</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.x.x/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.x.x/firebase-firestore.js"></script>
+    <style>
+        .hero-content h1 {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            color: #FF5722;
+            font-weight: 600;
+        }
+
+        .hero-content p {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            color: #fff;
+            font-weight: 500;
+        }
+
+        /* Keep the overlay lighter */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <img src="assets/images/logo.png" alt="Pertevforge Logo" class="logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="pages/projects.html">Projeler</a></li>
+            <li><a href="pages/calendar.html">Takvim</a></li>
+            <li><a href="pages/team.html">Ekibimiz</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Pertevforge Entertainment</h1>
+                <p>Pertevniyal Lisesi Öğrenci Oyun Geliştirme Kulübü</p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-secondary">Projelerimiz</a>
+                    <a href="#contact" class="btn btn-primary">Bize Katılın</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section">
+            <div class="container">
+                <h2 class="section-title">Biz Kimiz?</h2>
+                <p class="section-subtitle">Geleceğin oyun geliştiricilerini yetiştiriyoruz</p>
+                <div class="split-section">
+                    <div class="split-section-content">
+                        <p>Pertevforge Entertainment, Pertevniyal Lisesi öğrencilerinin oyun geliştirme tutkusunu bir araya getiren bir kulüptür. 2024 yılında kurulan kulübümüz, geleceğin oyun geliştiricilerini yetiştirmeyi ve kendi oyun projelerimizi geliştirip yayınlamayı hedeflemektedir.</p>
+                    </div>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <h3>15+</h3>
+                            <p>Aktif Üye</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>3</h3>
+                            <p>Geliştirilen Proje</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>4</h3>
+                            <p>Farklı Platform</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-projects" id="projects">
+            <div class="container">
+                <h2 class="section-title">Öne Çıkan Projelerimiz</h2>
+                <p class="section-subtitle">Öğrencilerimizin geliştirdiği oyunlar ve uygulamalar</p>
+                <div class="project-grid">
+                    <div class="project-card">
+                        <img src="assets/images/project1.jpg" alt="Proje 1">
+                        <div class="project-info">
+                            <h3>Proje Adı</h3>
+                            <p>Proje açıklaması buraya gelecek. Firebase'den dinamik olarak yüklenecek.</p>
+                            <div class="project-tags">
+                                <span class="tag">Unity</span>
+                                <span class="tag">2D</span>
+                                <span class="tag">Platformer</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Diğer proje kartları -->
+                </div>
+            </div>
+        </section>
+
+        <section class="technologies-section">
+            <div class="container">
+                <h2 class="section-title">Kullandığımız Teknolojiler</h2>
+                <p class="section-subtitle">Endüstri standardı araçlar ve platformlar</p>
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <i class="fab fa-github tech-icon"></i>
+                        <h3>Unreal Engine</h3>
+                        <p>Oyun Motoru</p>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fab fa-github tech-icon"></i>
+                        <h3>GitHub</h3>
+                        <p>Versiyon Kontrolü</p>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-code-branch tech-icon"></i>
+                        <h3>SVN</h3>
+                        <p>Versiyon Kontrolü</p>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-code-merge tech-icon"></i>
+                        <h3>Perforce</h3>
+                        <p>Versiyon Kontrolü</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="section-title">Bize Katılın</h2>
+                    <p class="section-subtitle">Oyun geliştirme tutkunu öğrenciler arıyoruz</p>
+                    <a href="#contact" class="btn btn-secondary btn-large">İletişime Geçin</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Pertevforge Entertainment</p>
+    </footer>
+
+    <script src="js/firebase-config.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 
